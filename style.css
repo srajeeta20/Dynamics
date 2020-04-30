@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #09f;
+  height: 100vh;
+}
+
+.wrapper {
+  border-bottom: solid 2px #fff;
+  height: 40vmin;
+  left: 50%;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 120vmin;
+}
+.wrapper .rainbow {
+  animation: spin 4s ease-in-out infinite;
+  height: 80vmin;
+  margin: 0 auto;
+  position: relative;
+  width: 80vmin;
+}
+.wrapper .rainbow:after {
+  animation: fadeInOut 4s ease-in-out infinite;
+  background-color: #09f;
+  bottom: 40vmin;
+  color: #fff;
+  content: "Stay Home Stay Safe";
+  font-family: sans-serif;
+  font-size: 8vmin;
+  left: 0;
+  padding: 8vmin 11.4285714286vmin;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  top: 0;
+}
+.wrapper .rainbow .arc {
+  border: solid 3.2vmin;
+  border-radius: 50%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.wrapper .rainbow .arc.red {
+  border-color: red;
+}
+.wrapper .rainbow .arc.orange {
+  border-color: orange;
+  margin: 3.2vmin;
+}
+.wrapper .rainbow .arc.yellow {
+  border-color: yellow;
+  margin: 6.4vmin;
+}
+.wrapper .rainbow .arc.green {
+  border-color: yellowgreen;
+  margin: 9.6vmin;
+}
+.wrapper .rainbow .arc.blue {
+  border-color: skyblue;
+  margin: 12.8vmin;
+}
+.wrapper .rainbow .arc.violet {
+  border-color: violet;
+  margin: 16vmin;
+}
+.wrapper .rainbow .arc.purple {
+  border-color: mediumpurple;
+  margin: 19.2vmin;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  50%, 100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fadeInOut {
+  0%, 50%, 100% {
+    color: #09f;
+  }
+  70%, 80% {
+    color: #fff;
+  }
+}
